@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/addPostFragment"
+        android:name="se.liu.robn725.tddd80_projekt.AddPostFragment"
+        android:label="fragment_add_post"
+        tools:layout="@layout/fragment_add_post" >
+        <action
+            android:id="@+id/action_addPostFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:enterAnim="@anim/nav_default_pop_enter_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="se.liu.robn725.tddd80_projekt.UserProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_postDetailFragment"
+            app:destination="@id/postDetailFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="se.liu.robn725.tddd80_projekt.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_addPostFragment"
+            app:destination="@id/addPostFragment"
+            app:enterAnim="@android:anim/bounce_interpolator"
+            app:popEnterAnim="@android:anim/slide_in_left" />
+        <action
+            android:id="@+id/action_homeFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_searchUserFragment"
+            app:destination="@id/searchUserFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_postDetailFragment"
+            app:destination="@id/postDetailFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/postDetailFragment"
+        android:name="se.liu.robn725.tddd80_projekt.PostDetailFragment"
+        android:label="fragment_post_detail"
+        tools:layout="@layout/fragment_post_detail" >
+        <argument
+            android:name="postId"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchUserFragment"
+        android:name="se.liu.robn725.tddd80_projekt.SearchUserFragment"
+        android:label="fragment_search_user"
+        tools:layout="@layout/fragment_search_user" >
+        <action
+            android:id="@+id/action_searchUserFragment_to_searchedUserProfile"
+            app:destination="@id/searchedUserProfile"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchedUserProfile"
+        android:name="se.liu.robn725.tddd80_projekt.SearchedUserProfile"
+        android:label="fragment_searched_user_profile"
+        tools:layout="@layout/fragment_searched_user_profile" >
+        <action
+            android:id="@+id/action_searchedUserProfile_to_postDetailFragment"
+            app:destination="@id/postDetailFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right" />
+    </fragment>
+</navigation>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/registerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context=".RegisterFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="@drawable/add_image"
+        android:orientation="vertical"
+        android:padding="30dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Registrera"
+                android:textSize="36sp" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/ic_baseline_person_24" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/register_username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:autofillHints=""
+            android:background="#ECECEC"
+            android:ems="10"
+            android:hint="Användarnamn"
+            android:inputType="textPersonName"
+            android:padding="10dp"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/register_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="#ECECEC"
+            android:ems="10"
+            android:hint="Lösenord"
+            android:inputType="textPassword"
+            android:padding="10dp"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/register_firstname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="#ECECEC"
+            android:ems="10"
+            android:hint="Förnamn"
+            android:inputType="textPersonName"
+            android:padding="10dp"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/register_lastname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="#ECECEC"
+            android:ems="10"
+            android:hint="Efternamn"
+            android:inputType="textPersonName"
+            android:padding="10dp"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/register_phonenumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="#ECECEC"
+            android:ems="10"
+            android:hint="Telefonnummer"
+            android:inputType="number"
+            android:padding="10dp"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/register_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="#ECECEC"
+            android:ems="10"
+            android:hint="E-post"
+            android:inputType="textPersonName"
+            android:padding="10dp"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Skapa konto" />
+
+        <Button
+            android:id="@+id/back_to_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Logga in" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout3"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@android:style/Theme.Black"
+    tools:context=".AddPostFragment">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/post_image"
+            android:layout_width="298dp"
+            android:layout_height="276dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/add_image"
+            tools:src="@drawable/ic_baseline_add_circle_outline_24" />
+
+        <Button
+            android:id="@+id/post_upload_image_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:text="@string/ladda_upp_bild" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kategori"
+            android:textSize="30sp" />
+
+        <Spinner
+            android:id="@+id/category_spinner"
+            style="@style/Widget.AppCompat.Spinner.Underlined"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/text_box"
+            android:dropDownWidth="wrap_content"
+            android:dropDownSelector="@drawable/ic_baseline_add_circle_outline_24"
+            android:popupBackground="@color/white"
+            android:spinnerMode="dialog" />
+
+        <EditText
+            android:id="@+id/post_title"
+            android:layout_width="match_parent"
+            android:layout_height="47dp"
+            android:layout_margin="20dp"
+            android:background="@drawable/text_box"
+            android:ems="10"
+            android:inputType="text"
+            android:hint="@string/post_title"
+            android:padding="10dp" />
+
+        <EditText
+            android:id="@+id/post_description"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="20dp"
+            android:background="@drawable/text_box"
+            android:ems="10"
+            android:gravity="start"
+            android:hint="@string/post_description"
+            android:inputType="textMultiLine"
+            android:isScrollContainer="true"
+            android:lines="8"
+            android:maxLines="10"
+            android:minLines="6"
+            android:padding="10dp"
+            android:scrollbars="vertical" />
+
+        <EditText
+            android:id="@+id/post_price"
+            android:layout_width="87dp"
+            android:layout_height="41dp"
+            android:layout_marginEnd="134dp"
+            android:background="@drawable/text_box"
+            android:ems="10"
+            android:hint="@string/pris"
+            android:inputType="number"
+            android:padding="10dp" />
+
+        <CheckBox
+            android:id="@+id/location_check_box"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:text="@string/anv_nd_nuvarande_plats"
+            android:textColor="#000000" />
+
+        <Button
+            android:id="@+id/post_add_post"
+            android:layout_width="128dp"
+            android:layout_height="65dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/add_post" />
+
+    </LinearLayout>
+
+
+</ScrollView>
